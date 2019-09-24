@@ -15,22 +15,22 @@ import javax.swing.JPanel;
 public class MyFirstSwingGUI {
 	public void run() {
 
-		// 1. Create and initialize an object of the JFrame class
+		JFrame bob = new JFrame();// 1. Create and initialize an object of the JFrame class
 
-		// 2. Set your JFrame object to be visible
+		bob.setVisible(true);// 2. Set your JFrame object to be visible
 
 		// 3. Run your program. Do you see your window? It's probably very
 		// small.
+bob.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	// 4. Set the default close operation to JFrame.EXIT_ON_CLOSE
 
-		// 4. Set the default close operation to JFrame.EXIT_ON_CLOSE
+	JPanel billy = new JPanel();	// 5. Create and initialize an object of the JPanel class
 
-		// 5. Create and initialize an object of the JPanel class
+		JLabel joe = new JLabel();// 6. Create and initialize an object of the JLabel class
 
-		// 6. Create and initialize an object of the JLabel class
+		joe.setText("Hello. How are you today?");// 7. Set the text of the JLabel to a lovely greeting.
 
-		// 7. Set the text of the JLabel to a lovely greeting.
-
-		// 8. Add the JPanel object to the JFrame
+	// 8. Add the JPanel object to the JFrame
 
 		// 9. Add the JLabel object to the JPanel
 
