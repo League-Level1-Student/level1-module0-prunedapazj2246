@@ -21,10 +21,10 @@ public class BodyPartQuiz {
 	// package,or if you prefer, get celebrity photos from the Internet,
 	// place them in the default package, and change the names below.
 
-	String firstImage = "src/body_part_quiz/messi.jpg";
-	String secondImage = "src/body_part_quiz/ninja.jpg";
-	String thirdImage = "src/body_part_quiz/dad.jpg";
-	String fourthImage = "src/body_part_quiz/mom.jpg";
+	String firstImage = "src/_05_body_part_quiz/messi.jpg";
+	String secondImage = "src/_05_body_part_quiz/ninja.jpg";
+	String thirdImage = "src/_05_body_part_quiz/dad.jpg";
+	String fourthImage = "src/_05_body_part_quiz/mom.jpg";
 
 	JFrame window = new JFrame();
 	JPanel panel = new JPanel();
@@ -62,7 +62,7 @@ public class BodyPartQuiz {
 			score+=1;// 5. Check their answer. If they guessed correctly:
 		}
 		else {
-		
+			JOptionPane.showMessageDialog(null, "YOU ARE WRONG!! The person is Messi.");
 		}
 		// -- Tell them they are right and increase the score by 1
 
@@ -71,10 +71,33 @@ public class BodyPartQuiz {
 
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
+		String ninja = JOptionPane.showInputDialog("who is this?");
+	if(ninja.equals("ninja")) {
+		JOptionPane.showMessageDialog(null, "YOU ARE RIGHT!!");// 8. .... repeat 4-7 for all your images.....
+		score+=1;
+	}else {
+		JOptionPane.showMessageDialog(null, "YOU ARE WRONG!! THIS IS Ninja");
+	}
+	showNextImage();
+	String dad = JOptionPane.showInputDialog("who is this?");
+	 if (dad.equals("Jose")) {
+		 JOptionPane.showMessageDialog(null, "YOU ARE RIGHT!!");// 8. .... repeat 4-7 for all your images.....
+			score+=1;
+	}else {
+		JOptionPane.showMessageDialog(null, "YOU ARE WRONG!! THIS IS Jose");
+	}
+	 showNextImage();
+	 String mom = JOptionPane.showInputDialog("who is this?"); 
+	 if(mom.equals("Elina")) {
+		 JOptionPane.showMessageDialog(null, "YOU ARE RIGHT!!");// 8. .... repeat 4-7 for all your images.....
+			score+=1;
+	 }else {
+		 JOptionPane.showMessageDialog(null, "YOU ARE WRONG!! THIS IS Elina");
+	 }
+	
 
-		// 8. .... repeat 4-7 for all your images.....
-
-		// 9. Show them their current score
+		JOptionPane.showMessageDialog(null, "Your current score is "+ score);// 9. Show them their current score
+		
 
 	}
 

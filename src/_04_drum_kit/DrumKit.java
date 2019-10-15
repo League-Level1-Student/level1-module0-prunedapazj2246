@@ -22,7 +22,7 @@ import javax.swing.JPanel;
 public class DrumKit implements MouseListener {
 
 	JLabel cymbalLabelWithImage;
-JLabel drumLabelWithImage; 
+JLabel druLabelWithImage; 
 	public void run() throws MalformedURLException {
 
 		JFrame frame = new JFrame();// 1. Make a JFrame variable and initialize it using "new JFrame()"
@@ -56,11 +56,12 @@ JLabel drumLabelWithImage;
 		cymbalLabelWithImage.addMouseListener(this);// 13. add this mouse listener to drumLabelWithImage
 
 		String drum = "snare.jpg";// 18. Add more images to make a drumkit. Remember to add this mouse
-		drumLabelWithImage=createLabelImage(drum);// listener to each one.
-		panel.add(drumLabelWithImage);
+		druLabelWithImage=createLabelImage(drum);// listener to each one.
+		panel.add(druLabelWithImage);
 		panel.setLayout(new GridLayout());
 		frame.pack();
-		drumLabelWithImage.addMouseListener(this);
+		druLabelWithImage.addMouseListener(this);
+		
 	}
 
 	public void mouseClicked(MouseEvent e,MouseEvent c) {
@@ -68,7 +69,7 @@ JLabel drumLabelWithImage;
 		// the console to see when this is printed.
 
 		JLabel cymbalClicked = (JLabel) e.getSource(); // This line gets the label
-										// that the mouse
+			JLabel drumClicked = (JLabel) c.getSource();							// that the mouse
 														// clicked on
 
 		// 15. Download a drum sound and drop it into your "default package".
@@ -79,7 +80,9 @@ JLabel drumLabelWithImage;
 			playSound("cymbal.wav");// 16. If they clicked on the drumImage...
 
 		}
-
+		else if(drumClicked!= null) {
+			playSound("drum.wav");
+		}
 		// 17. ...use the playSound method to play a drum sound. Test to see if
 		// it works
 
@@ -124,6 +127,12 @@ JLabel drumLabelWithImage;
 	public void mouseExited(MouseEvent e) {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
