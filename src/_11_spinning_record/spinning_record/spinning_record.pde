@@ -5,20 +5,20 @@ Minim minim;
 AudioPlayer song;
 void setup(){
   size(600,600);
-  record=loadImage("record.jpg");
+  record=loadImage("record.png");
   record.resize(600,600);
   minim = new Minim(this);
   song = minim.loadFile("awesomeTrack.mp3", 512); 
 }
 void draw(){
+  
  if(mousePressed){
    song.play();
-  imageAngle+=10000;
+  imageAngle+=1000;
  rotateImage(record,imageAngle);
- image(record, 0, 0);
  song.pause();
  }
- 
+ image(record, 0, 0);
 }
 
  void rotateImage(PImage image, int amountToRotate) {
