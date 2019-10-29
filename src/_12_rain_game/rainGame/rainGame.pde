@@ -30,7 +30,7 @@ void checkCatch(int x){
             score++;
             println("Your score is now: " + score);
          }
-          if (y ==575) {
+          if (y >=575) {
             score--;
         println("Your score is now: " + score);
          }else if (score == -1){
