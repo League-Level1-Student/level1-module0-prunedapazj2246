@@ -1,4 +1,4 @@
-  PImage backgroundImage;
+   PImage backgroundImage;
  import ddf.minim.*;
   Minim minim;
   AudioSample sound;
@@ -24,11 +24,11 @@ rect(mouseX, 890, 70, 30);
   fill(#FF0307);
   stroke(#FF0307);
 ellipse(x,y,20, 20);
-//x+=5;
-//y+=10;
+x+=5;
+y+=10;
   if(x <=0){
      
-     //x+=5;
+     x+=5;
    xspeed=-xspeed;
     
     
@@ -37,9 +37,9 @@ ellipse(x,y,20, 20);
 else if(x>=width-5) {
 
    xspeed=-xspeed ;
-   // x-=5;   
+    x-=5;   
  } if(y <=0){
-    //y+=10;
+    y+=10;
      
    yspeed=-yspeed;
     
@@ -47,7 +47,7 @@ else if(x>=width-5) {
        
   }
 else if(y>=height) {
-//y-=5;
+y-=5;
    sound.trigger();
        
  }
@@ -56,7 +56,9 @@ if(intersects(x,y,mouseX,890,70)== true){
   y-=50;
   x-=25;
 }
-  
+ if(y>height){
+  System.exit(0); 
+ }
   x+=xspeed;
   y+=yspeed;
   
@@ -70,4 +72,5 @@ if(intersects(x,y,mouseX,890,70)== true){
      if (ballY > paddleY && ballX > paddleX && ballX < paddleX + paddleLength)
           return true;
      else
-          return false;}
+          return false;
+        }
