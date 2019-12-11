@@ -11,12 +11,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class soundEffectsMachine implements ActionListener {
-public void showButton() {
-	JFrame frame = new JFrame();
-	JPanel panel = new JPanel();
 	JButton b1 = new JButton();
 	JButton b2 = new JButton();
 	JButton b3 = new JButton();
+public void showButton() {
+	JFrame frame = new JFrame();
+	JPanel panel = new JPanel();
+	
+
 	JLabel l1 = new JLabel();
 	JLabel l2 = new JLabel();
 	JLabel l3 = new JLabel();
@@ -45,7 +47,14 @@ private void playSound(String fileName) {
 }
 @Override
 public void actionPerformed(ActionEvent e) {
-	// TODO Auto-generated method stub
+if(e.getSource().equals(b1)) {
+	playSound("violin.wav");// TODO Auto-generated method stub
+}
+else if(e.getSource().equals(b2)) {
+	playSound("villager.wav");
+}else if(e.getSource().equals(b3)) {
+	playSound("fire.wav");
+}
 	
 }
 }
